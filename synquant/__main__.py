@@ -15,6 +15,7 @@ print(len(series))
 img = series[2].getFrame(channel=1, dtype=np.uint16)
 print(img.shape)
 
+# plot
 plt.imshow(np.std(img[:,:,:], axis=0), interpolation=None, cmap=plt.cm.binary)
 plt.show()
 
