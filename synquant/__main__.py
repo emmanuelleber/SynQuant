@@ -23,7 +23,7 @@ for dim in dims:
     length = float(dim.getAttribute('Length'))
     N = int(dim.getAttribute('NumberOfElements'))
     print(d0, length, N)
-    DIMS.append(np.linspace(d0, d0+length, N))
+    DIMS.append(1e6*np.linspace(d0, d0+length, N)) # in um
 
 X, Y, Z = np.meshgrid(*DIMS, indexing='ij')
 
